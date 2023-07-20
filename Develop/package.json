@@ -1,11 +1,13 @@
 {
-  "name": "note-taker",
+  "name": "note-taker-assistant",
   "version": "1.0.0",
-  "description": "",
+  "description": "Note Taker Assistant",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

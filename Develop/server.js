@@ -6,7 +6,7 @@ const fs = require ('fs');
 const path = require ('path');
 // Import the  'db.json' file which acts as a simple database in this application
 // By changing const to let, you're allowing db to be reassigned later in your code, which is necessary in your delete route (app.delete('/api/notes/:id', (req, res) => { ... });) where db is reassigned to a new array that excludes the deleted note.
-let db = require('./db.json');
+let db = require('./db/db.json');
 
 
 // Initialize the express application
@@ -25,7 +25,7 @@ app.use(express.static('public'));
 
 // Send index.html file
 // This sets up a 'GET' request route for the home page ('/). When the homepage is requested, it sends the 'index.html' file.
-app.get('/', (req, res) +> {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'));
 
 });
@@ -38,13 +38,14 @@ app.get('/notes', (req, res) => {
 
 // Return all saved notes as JSON
 // This sets up a GET request route for the '/api/notes' url. When this URL is requested, it responds with the content 'db.json'.
-app.get('./api/notes', (req,res) => {
+app.get('/api/notes', (req, res) => {
     res.json(db);
-}
+});
 
 // Add a new note
 // This sets up a POST request route for the '/api/notes' URL. It creates a new note, adds it to the 'db' array, writes the updated array to 'db.json', and then sends the updated 'db.json' content in the response
 app.post('/api/notes', (req, res) => {
+    let newNote = req.body;
     newNote.id = db.length + 1;
     db.push(newNote);
     fs.writeFile('./db.json', JSON.stringify(db), (err) => {
