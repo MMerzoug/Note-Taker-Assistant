@@ -76,6 +76,7 @@ app.post('/api/notes', (req, res) => {
             res.json(newNote);
         });
     });
+});
 
     // Delete a note
     // This sets up a DELETE request route for the '/api/notes/:id' URL. It deletes a note with a specific 'id' from the 'db' array, writes the updated array to db.json', then sends the updated 'db.json' content in the response.
