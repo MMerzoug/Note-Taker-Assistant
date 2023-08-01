@@ -8,7 +8,7 @@ const path = require('path');
 const uuid = require('uuid');
 // Import the  'db.json' file which acts as a simple database in this application
 // By changing const to let, you're allowing db to be reassigned later in your code, which is necessary in your delete route (app.delete('/api/notes/:id', (req, res) => { ... });) where db is reassigned to a new array that excludes the deleted note.
-let db = require('./Develop/db/db.json');
+let db = require('./db/db.json');
 
 
 // Initialize the express application
