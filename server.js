@@ -14,7 +14,7 @@ let db = require('./Develop/db/db.json');
 // Initialize the express application
 const app = express();
 // Sets the port to eithee the port number set in the environment variable 'PORT' or to 3000 if 'PORT' is not set
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Sets up the Express app to handle data parsing
 // Middleware that parses incoming requests with urlencoded payloads and is based on body-parser
