@@ -6,13 +6,9 @@ This is a simple note-taking application designed to assist small business owner
 
 ## Mock-Up
 
-![Mock-Up Image 1](mockup-1.png)
+![Mock-Up Image 1](Note-Taker-Assistant.png)
 
 Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note's title and text.
-
-![Mock-Up Image 2](mockup-2.png)
-
-Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.
 
 ## Getting Started
 
@@ -23,7 +19,7 @@ To run the Note-Taker application, follow these steps:
 3. Navigate to the project directory in the terminal.
 4. Install the required dependencies by running the following command:
 
-npm install
+>npm install
 
 5. Create a `db.json` file on the back end to store and retrieve notes using the fs module.
 6. Create the following HTML routes:
@@ -41,20 +37,20 @@ To deploy the Note-Taker application to Heroku, follow these steps:
 2. Install the Heroku CLI on your computer.
 3. Log in to your Heroku account using the CLI:
 
-heroku login
+>heroku login
 
 4. In the project directory, create a `Procfile` with the following content:
 
-web: node server.js
+>web: node server.js
 
 5. Commit any changes and push the code to a GitHub repository.
 6. Create a new Heroku app using the CLI:
 
-heroku create your-app-name
+>heroku create your-app-name
 
 7. Deploy the app to Heroku:
 
-git push heroku main
+>git push heroku main
 
 8. Once the deployment is successful, you can open the app in your browser using the Heroku app URL.
 
